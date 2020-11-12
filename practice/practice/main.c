@@ -19,6 +19,7 @@ int main(int argc, const char * argv[]) {
     **q = 300;
     printf("i = %d, *p = %d, **q = %d\n", i, *p, **q);
     
+    printf("%p %p\n", p, *q);
     
     return 0;
 }
