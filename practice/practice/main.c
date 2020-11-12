@@ -7,19 +7,17 @@
 //
 
 #include <stdio.h>
+char *proverb="All that glisters is not gold.";
 
-int main(int argc, const char * argv[]) {
-    int i = 100;
-    int *p = &i;
-    int **q = &p;
-    
-    *p = 200;
-    printf("i = %d, *p = %d, **q = %d\n", i, *p, **q);
-    
-    **q = 300;
-    printf("i = %d, *p = %d, **q = %d\n", i, *p, **q);
-    
-    printf("%p %p\n", p, *q);
+void setPointer(char **q)
+{
+  *q = proverb;
+}
+
+int main(void) {
+    char *p = "zzz";
+    setPointer(&p);
+    printf("%s \n", p);
     
     return 0;
 }
